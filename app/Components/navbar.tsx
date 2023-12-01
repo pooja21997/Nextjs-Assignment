@@ -1,5 +1,6 @@
 'use client'
-
+import Image from 'next/image';
+import { FaGlobe } from 'react-icons/fa';
 import {
   Box,
   Flex,
@@ -15,7 +16,6 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  Image
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
@@ -34,7 +34,7 @@ export default function Navbar() {
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
-        px={{ base: 4 , md:16 }}
+        px={{ base: 4 }}
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -55,8 +55,10 @@ export default function Navbar() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-              <Image src="/path_to_your_image.png" alt="Logo" boxSize="50px" mr={4} />
+             <Icon as={FaGlobe} w={5} h={5} color={'#19182580'}/>
+             <Text fontSize={'sm'} fontWeight={900} color={'black'}>Travlog</Text>
           </Text>
+
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
@@ -68,8 +70,8 @@ export default function Navbar() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-           Login In
+          <Button as={'a'} fontSize={'sm'} fontWeight={600} variant={'link'} href={'#'} color={'black'}>
+           Log In
           </Button>
           <Button
             as={'a'}

@@ -2,7 +2,10 @@
 
 import { ReactElement } from 'react'
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
+import { FcAssistant, FcDonate, FcInTransit , } from 'react-icons/fc'
+import { FaTripadvisor, FaAirbnb , FaPlane } from 'react-icons/fa';
+
+
 
 interface FeatureProps {
   title: string
@@ -32,29 +35,45 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 
 export default function Features() {
   return (
-    <Box p={4}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+    <Box p={5}>
+      <SimpleGrid columns={{ base: 2, md: 5 }} spacing={5}  alignItems="flex-center">
         <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={'Lifetime Support'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
-          }
+          icon={<Icon as={FaTripadvisor} w={5} h={5} color={'#19182580'}/>}
+          title={'tripadvisor'} 
+          text={''}
         />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={'Unlimited Donations'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+          icon={<Icon as={FcDonate} w={5} h={5} color={'#19182580'}/>}
+          
+          title={'Expedia'}
+          text={''
+            
           }
+          
         />
         <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={'Instant Delivery'}
-          text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+          icon={<Icon as={FaPlane} w={5} h={5} color={'#19182580'}/>}
+          title={'Booking.com'}
+          text={''
+          
           }
         />
+
+<Feature
+          icon={<Icon as={FaAirbnb} w={5} h={5} color={'#19182580'}/>}
+          title={'airbnb'}
+          text={
+            ''
+          }
+        />
+<Feature
+          icon={<Icon as={FcInTransit} w={5} h={5} color={'#19182580'}/>}
+          title={'Orbitz'}
+          text={
+           ''
+          }
+        />
+        
       </SimpleGrid>
     </Box>
   )

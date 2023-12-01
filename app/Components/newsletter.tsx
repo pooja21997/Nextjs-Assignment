@@ -37,14 +37,14 @@ export default function NewsLetter() {
             color={useColorModeValue('gray.800', 'gray.200')}>
             Subscribe
           </Heading>
-          <div>
-      <p style={{ textAlign: 'center', textTransform: 'uppercase', fontSize: '1.25rem', color: '#E75480' }}>
+          
+          <p id="newsletter-text" style={{ textAlign: 'center', textTransform: 'uppercase', fontSize: '1.25rem', color: '#E75480' }}>
         Subscribe to our newsletter
       </p>
-      <p style={{ textAlign: 'center', fontSize: '1.25rem' }}>
+      <p id="explore-text" style={{ textAlign: 'center', fontSize: '1.25rem' }}>
         Prepare yourself & lets explore the beauty of the world
       </p>
-    </div>
+ 
         </Stack>
         <Stack spacing={4} direction={{ base: 'column', md: 'row' }} w={'full'}>
           <Input

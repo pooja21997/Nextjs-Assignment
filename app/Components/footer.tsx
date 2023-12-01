@@ -11,9 +11,10 @@ import {
   Input,
   IconButton,
   useColorModeValue,
+  Icon
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGlobe, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
 
 const Logo = (props: any) => {
@@ -81,7 +82,9 @@ export default function Footer() {
           spacing={8}>
           <Stack spacing={6}>
             <Box>
-              <Logo color={useColorModeValue('gray.700', 'white')} />
+              {/* <Logo color={useColorModeValue('gray.700', 'white')} /> */}
+              {<Icon as={FaGlobe} w={5} h={5} color={'#19182580'}/>}
+              <Text color={'black.400'} fontWeight={800}>Travlog</Text>
             </Box>
             <Text fontSize={'sm'}>Travlog
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
